@@ -1,0 +1,50 @@
+{
+  "name": "aliquamvoluptatum",
+  "version": "1.0.0",
+  "main": "wallet-avatar.bundle.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "rm -rf ./dist && tsc && rollup -c rollup.config.js -i dist/index.js > dist/wallet-avatar.bundle.js && node ./tools/copy.js",
+    "build:beta": "rm -rf ./dist && tsc && rollup -c rollup.config.js -i dist/index.js > dist/wallet-avatar.bundle.js && node ./tools/copy.js --beta",
+    "format": "prettier --write ./src ./test",
+    "prettier": "pretty-quick --staged",
+    "preview": "vite preview"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier"
+    }
+  },
+  "keywords": [
+    "temporibus",
+    "web3",
+    "metamask",
+    "numquam",
+    "quia",
+    "qui",
+    "typescript",
+    "sint",
+    "conflux"
+  ],
+  "author": "AnaisBode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KennithPollich/aliquamvoluptatum.git"
+  },
+  "devDependencies": {
+    "hooks": "latest",
+    "husky": "latest",
+    "prettier": "latest",
+    "pretty-quick": "latest",
+    "rollup": "^2.70.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/mersenne-twister": "^1.1.2",
+    "mersenne-twister": "^1.1.0"
+  }
+}
